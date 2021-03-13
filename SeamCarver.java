@@ -3,6 +3,7 @@
  * CS 61B SP18 HW5: Seam Carving
  */
 import edu.princeton.cs.algs4.Picture;
+import edu.princeton.cs.algs4.StdDraw;
 
 import java.awt.*;
 import java.util.Arrays;
@@ -33,10 +34,13 @@ public class SeamCarver {
     }
 
     public int[] findHorizontalSeam() {
+        int[] horizontalSeam = new int[picture.height()];
         return null;
     }
 
     public int[] findVerticalSeam() {
+        int[] verticalSeam = new int[picture.width()];
+
         return null;
     }
 
@@ -72,6 +76,8 @@ public class SeamCarver {
 
         System.out.println(sc.energy(2, 0));
 
+        Picture energyPicture = SCUtility.toEnergyPicture(sc);
+        energyPicture.show();
     }
 
 }
