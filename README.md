@@ -9,7 +9,7 @@ The energy picture the image below is shown on the right. Pixels with higher ene
 
 
 
-<p float="middle">
+<p align="middle">
   <img src="https://i.imgur.com/eIQVUYP.jpg" width="400" />
   <img src="https://i.imgur.com/pIaHQVx.jpg" width="400" /> 
 </p>
