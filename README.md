@@ -4,7 +4,9 @@
 
 Finding and removing a seam is done in three parts:
 
-**Energy calculation:** The first step is to calculate the energy of each pixel, which is a measure of the importance of each pixel—the higher the energy, the less likely that the pixel will be included as part of a seam (as we’ll see in the next step). In this assignment, you will implement the dual gradient energy function, which is described below. Here is the dual gradient of the surfing image above:Seam Carving Josh EnergyA high-energy pixel corresponds to a pixel where there is a sudden change in color (such as the boundary between the sea and sky or the boundary between the surfer on the left and the ocean behind him). In the image above, pixels with higher energy values have whiter values. The seam-carving technique avoids removing such high-energy pixels.
+**Energy calculation:** The first step is to calculate the energy of each pixel, which is a measure of the importance of each pixel—the higher the energy, the less likely that the pixel will be included as part of a seam. The energy of a pixel is compute using the dual gradient energy function, which is described below. A high-energy pixel corresponds to a pixel where there is a sudden change in color. In the image below, pixels with higher energy values have whiter values. The seam-carving technique avoids removing such high-energy pixels.  
+
+![SeamCarvingEnergyImage](https://sp18.datastructur.es/materials/hw/hw5/images/HJoceanSmallEnergy.png)  
 
 **Seam Identification:** The next step is to find a vertical seam of minimum total energy. This is similar to the classic shortest path problem in an edge-weighted digraph except for the following:
  * The weights are on the vertices instead of the edges.
