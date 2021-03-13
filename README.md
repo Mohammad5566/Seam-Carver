@@ -2,7 +2,7 @@
 
 [Seam Carving](https://www.wikiwand.com/en/Seam_carving) is a content-aware image resizing technique where the image is reduced in size by one pixel of height or width at a time. A vertical seam in an image is a path of pixels connected from the top to the bottom with one pixel in each row. A horizontal seam is a path of pixels connected from the left to the right with one pixel in each column.  
 
-###Finding and Removing a Seam:
+### Finding and Removing a Seam:
 
 **Energy calculation:** The first step is to calculate the energy of each pixel, which is a measure of the importance of each pixel—the higher the energy, the less likely that the pixel will be included as part of a seam. The energy of a pixel is compute using the dual gradient energy function. A high-energy pixel corresponds to a pixel where there is a sudden change in color. In the image below, pixels with higher energy values have whiter values. The seam-carving technique avoids removing such high-energy pixels.  
 
