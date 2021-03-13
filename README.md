@@ -10,8 +10,8 @@ The energy picture the image below is shown on the right. Pixels with higher ene
 
 
 <p align="middle">
-  <img src="https://i.imgur.com/eIQVUYP.jpg" width="400" />
-  <img src="https://i.imgur.com/pIaHQVx.jpg" width="400" /> 
+  <img src="https://i.imgur.com/eIQVUYP.jpg" width="500" />
+  <img src="https://i.imgur.com/pIaHQVx.jpg" width="500" /> 
 </p>
 
 
