@@ -11,8 +11,8 @@ The energy picture the image below is shown on the right.
 
 
 <p align="middle">
-  <img src="https://i.imgur.com/eIQVUYP.jpg" width="500" />
-  <img src="https://i.imgur.com/pIaHQVx.jpg" width="500" /> 
+  <img src="https://i.imgur.com/eIQVUYP.jpg" width="450" />
+  <img src="https://i.imgur.com/pIaHQVx.jpg" width="450" /> 
 </p>
 
 
