@@ -32,6 +32,6 @@ Example: Remove 100 vertical seams from the image ```nyc.jpg```.
 Output: 
 
 <p align="middle">
-  <img src="https://user-images.githubusercontent.com/55007814/111056818-1d5fcd80-8450-11eb-84dd-61e8d736b576.png" width="500" />
+  <img src="https://user-images.githubusercontent.com/55007814/111056818-1d5fcd80-8450-11eb-84dd-61e8d736b576.png" width="650" />
 </p>
 
