@@ -30,9 +30,7 @@ Example: Remove 100 horizontal seams from the image ```nyc.jpg```.
 ```java SeamCarverVisualizer images/nyc.jpg 100 y```
 
 Output:
+![output](https://user-images.githubusercontent.com/55007814/111056818-1d5fcd80-8450-11eb-84dd-61e8d736b576.png)
 
-<p align="middle">
-  <img src="images/output.jpg" /> 
-</p>
 
 
