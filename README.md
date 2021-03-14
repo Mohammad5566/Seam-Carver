@@ -32,7 +32,7 @@ Example: Remove 100 horizontal seams from the image ```nyc.jpg```.
 Output:
 
 <p align="middle">
-  <img src="![output](https://user-images.githubusercontent.com/55007814/111056680-0d93b980-844f-11eb-867f-f36dbbeb7a7c.png)" width="550" />
+  <img src="images/output.jpg" width="550" /> 
 </p>
-![output](output.png/)
+
 
