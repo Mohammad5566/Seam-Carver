@@ -15,6 +15,11 @@ The energy picture the image below is shown on the right.
   <img src="https://i.imgur.com/pIaHQVx.jpg" width="450" /> 
 </p>
 
+<p align="middle">
+  <img src="images/nyc.jpg" width="450" />
+  <img src="images/joker.jpg" width="450" /> 
+</p>
+
 
 **Seam Identification:** The next step is to find a vertical seam of minimum total energy. This is similar to the classic shortest path problem in an edge-weighted digraph except for the following:
  * The weights are on the vertices instead of the edges.
