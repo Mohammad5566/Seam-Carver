@@ -20,6 +20,7 @@ public class ShowSeams {
         int[] horizontalSeam = sc.findHorizontalSeam();
         Picture epOverlay = SCUtility.seamOverlay(ep, true, horizontalSeam);
         epOverlay.show();
+        epOverlay.save("images/horizontal-seam.png");
     }
 
     private static void showVerticalSeam(SeamCarver sc) {
@@ -27,6 +28,7 @@ public class ShowSeams {
         int[] verticalSeam = sc.findVerticalSeam();
         Picture epOverlay = SCUtility.seamOverlay(ep, false, verticalSeam);
         epOverlay.show();
+        epOverlay.save("images/vertical-seam.png");
     }
 
     public static void main(String[] args) {

@@ -161,8 +161,12 @@ public class SeamCarver {
         Picture p = new Picture("images/joker.jpg");
         SeamCarver sc = new SeamCarver(p);
 
-        SCUtility.showEnergy(sc);
+        for (int i = 0; i < 50; i += 1) {
+            sc.removeVerticalSeam(sc.findVerticalSeam());
+            sc.removeHorizontalSeam(sc.findHorizontalSeam());
+        }
+
+        p.save("output.jpg");
 
     }
-
 }

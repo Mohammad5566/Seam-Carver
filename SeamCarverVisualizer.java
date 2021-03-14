@@ -57,11 +57,10 @@ public class SeamCarverVisualizer {
         }
 
         show(sc.picture());
-        sc.picture().save("output.png");
+        sc.picture().save("images/output.png");
     }
 
     private void paintHorizontalSeam(Picture p, int[] seam) {
-
         for (int i = 0; i < seam.length; i++) {
             p.set(i, seam[i], new Color(255, 0, 0));
         }
