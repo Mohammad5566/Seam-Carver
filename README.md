@@ -34,7 +34,7 @@ Example: Remove 100 vertical seams from the image ```nyc.jpg```.
   <img src="images/seamcarver.gif" width="650" />
 </p>
 
-_Content by Josh Hug, UC Berkeley CS 61B Data Structures
+<sup> *Content by Josh Hug, UC Berkeley CS 61B Data Structures* </sup>
 
 
 
