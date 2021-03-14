@@ -3,7 +3,7 @@
 
 [Seam Carving](https://www.wikiwand.com/en/Seam_carving) is a content-aware image resizing technique where the image is reduced in size by one pixel of height or width at a time. A vertical seam in an image is a path of pixels connected from the top to the bottom with one pixel in each row. A horizontal seam is a path of pixels connected from the left to the right with one pixel in each column.  
 
-### Finding and Removing a Seam:
+### Finding and Removing a Seam
 
 **Energy calculation:** The first step is to calculate the energy of each pixel, which is a measure of the importance of each pixel—the higher the energy, the less likely that the pixel will be included as part of a seam. The energy of a pixel is compute using the dual gradient energy function. A high-energy pixel corresponds to a pixel where there is a sudden change in color. The seam-carving technique avoids removing such high-energy pixels to preserve as much of the orignal image's properties as it can. Pixels with higher energy values have whiter values.  
 An image and its corresponding energy image is shown below.
@@ -20,7 +20,7 @@ An image and its corresponding energy image is shown below.
 
 **Seam Removal:** The final step is remove from the image all of the pixels along the seam. The logic for this method has been implemented for you in the supplementary SeamRemover class, provided in SeamRemover.java.
 
-### Usage:  
+### Usage
 
 To visualize the seam removal process, run ```SeamCarverVisualizer.java``` with the following command line arguements:   
 
@@ -33,4 +33,21 @@ Example: Remove 100 vertical seams from the image ```nyc.jpg```.
 <p align="middle">
   <img src="images/seamcarver.gif" width="650" />
 </p>
+
+### Examples
+
+<figure>
+    <img src='images/nyc.jpg' alt='nycOriginal' />
+    <figcaption>Original 1280x675</figcaption>
+</figure>
+
+<figure>
+    <img src='output-nyc.jpg' alt='nyc-output' />
+    <figcaption>Resized to 768x405</figcaption>
+</figure>
+
+
+
+
+
 
