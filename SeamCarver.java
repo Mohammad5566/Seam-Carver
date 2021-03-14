@@ -136,7 +136,7 @@ public class SeamCarver {
         if (seam.length != picture.width()) {
             throw new IllegalArgumentException();
         }
-        SeamRemover.removeHorizontalSeam(picture, findHorizontalSeam());
+        picture = SeamRemover.removeHorizontalSeam(picture, findHorizontalSeam());
     }
 
 
@@ -144,7 +144,7 @@ public class SeamCarver {
         if (seam.length != picture.height()) {
             throw new IllegalArgumentException();
         }
-        SeamRemover.removeVerticalSeam(picture, findVerticalSeam());
+        picture = SeamRemover.removeVerticalSeam(picture, findVerticalSeam());
     }
 
     private void checkIndex(int x, int y) {
