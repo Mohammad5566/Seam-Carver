@@ -19,9 +19,8 @@ The energy picture the image below is shown on the right.
 
 **Seam Removal:** The final step is remove from the image all of the pixels along the seam. The logic for this method has been implemented for you in the supplementary SeamRemover class, provided in SeamRemover.java.
 
-### Usage
+### Usage:  
 
-Run ```SeamCarverVisualize.java``` with the following commands to see seam carving in: 
--------------------------------------------------------
-java SeamCarverVisualizer [filename] [numPixels to remove] [y (if horizontal carving) | N (otherwise)]
-----------------------------------------------------------
+In order to visualize the seam removal process, run ```SeamCarverVisualizer.java`` with the following command line arguements:
+```java SeamCarverVisualizer [filename] [numPixels to remove] [y (if horizontal carving) | N (otherwise)]```
+This will overlay the horizontal or vertical seams onto the image you desire to resize. In 
