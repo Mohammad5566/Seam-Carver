@@ -38,7 +38,8 @@ public class SeamCarver {
     /*
     The findVerticalSeam() method returns an array of length H
     such that entry x is the column number of the pixel to be
-    removed from row x of the image. */
+    removed from row x of the image.
+    */
     public int[] findHorizontalSeam() {
         int[] horizontalSeam = new int[picture.width()];
 
@@ -50,6 +51,7 @@ public class SeamCarver {
 
     }
 
+    /*Need to clean this up */
     private int[] findSeam(int length) {
         int[] verticalSeam = new int[length];
 
