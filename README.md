@@ -32,7 +32,7 @@ Example: Remove 100 horizontal seams from the image ```nyc.jpg```.
 Output:
 
 <p align="middle">
-  <img src="output.png" width="550" />
+  <img src="/output.png" width="550" />
 </p>
 
 
