@@ -1,6 +1,7 @@
 
 import edu.princeton.cs.algs4.Picture;
 
+import java.awt.Color;
 import java.util.Arrays;
 
 /**
@@ -39,9 +40,44 @@ public class SeamCarver {
     such that entry x is the column number of the pixel to be
     removed from row x of the image. */
     public int[] findHorizontalSeam() {
-        int[] horizontalSeam = new int[picture.height()];
-        return null;
+        int[] horizontalSeam = new int[picture.width()];
+
+        Picture oldPicture = picture;
+        picture = transpose(picture);
+        int[] seam = findSeam(picture.height());
+        picture = oldPicture;
+        return seam;
+
     }
+
+    private int[] findSeam(int length) {
+        int[] verticalSeam = new int[length];
+
+        int row = 0;
+        double minTopRowEnergy = energy(0, 0);
+        int minEnergyIndex = 0;
+        for (int i = 1; i < picture.width(); i += 1) {
+            double energy = energy(i, row);
+            if (energy < minTopRowEnergy) {
+                minTopRowEnergy = energy;
+                minEnergyIndex = i;
+            }
+        }
+        verticalSeam[0] = minEnergyIndex;
+
+        row += 1;
+        for (int i = 1; i < verticalSeam.length; i += 1) {
+            if (row >= picture.height()) break;
+            int rowMinEnergyIndex = minimumEnergy(row,
+                    minEnergyIndex + 1, minEnergyIndex, minEnergyIndex - 1);
+            verticalSeam[i] = rowMinEnergyIndex;
+            minEnergyIndex = rowMinEnergyIndex;
+            row += 1;
+        }
+
+        return verticalSeam;
+    }
+
 
     /*MY APPROACH*/
     public int[] findVerticalSeam() {
@@ -72,41 +108,43 @@ public class SeamCarver {
         return verticalSeam;
     }
 
+    private Picture transpose(Picture p) {
+        Picture x = new Picture(p.height(), p.width());
 
-    /*Returns the index of the minimum energy of the pixels at
-    indices (x1, y), (x2, y), (x3, y).*/
-    private int minimumEnergy(int y, int x1, int x2, int x3) {
-        double energy1 = energy(x1, y);
-        double energy2 = energy(x2, y);
-        double energy3 = energy(x3, y);
+        for (int i = 0; i < p.width(); i += 1) {
+            for (int j = 0; j < p.height(); j += 1) {
+                Color c = p.get(i, j);
+                x.set(j, i, c);
 
-        System.out.println("Energy 1 : " + energy1);
-        System.out.println("Energy 2 : " + energy2);
-        System.out.println("Energy 3 : " + energy3);
-
-
-
-        int minEnergyIndex;
-        if (energy1 < energy2) minEnergyIndex = x1;
-        else if (energy3 < energy1) minEnergyIndex = x3;
-        else minEnergyIndex = x2;
-        return minEnergyIndex;
+            }
+        }
+        return x;
     }
 
+    /*Returns the index of the minimum energy of the pixels at
+      indices (x1, y), (x2, y), (x3, y).*/
+    private int minimumEnergy(int y, int x1, int x2, int x3) {
+        return minimum(minimum(x1, x2, y), x3, y);
+
+    }
+    /*Returns the minimum of pixels (x1, y) and (x2, y) */
+    private int minimum(int x1, int x2, int y) {
+        return (energy(x1, y) < energy(x2, y)) ? x1 : x2;
+    }
 
     public void removeHorizontalSeam(int[] seam) {
         if (seam.length != picture.width()) {
             throw new IllegalArgumentException();
         }
-
-
+        SeamRemover.removeHorizontalSeam(picture, findHorizontalSeam());
     }
+
 
     public void removeVerticalSeam(int[] seam) {
         if (seam.length != picture.height()) {
             throw new IllegalArgumentException();
         }
-        
+        SeamRemover.removeVerticalSeam(picture, findVerticalSeam());
     }
 
     private void checkIndex(int x, int y) {
@@ -120,14 +158,10 @@ public class SeamCarver {
 
 
     public static void main(String[] args) {
-        Picture p = new Picture("images/6x5.png");
+        Picture p = new Picture("images/joker.jpg");
         SeamCarver sc = new SeamCarver(p);
 
-        int[] realVerticalSeam = {3, 4, 3, 2, 2};
-        int[] testVerticalSeam = sc.findVerticalSeam();
-
-        System.out.println(Arrays.toString(realVerticalSeam));
-        System.out.println(Arrays.toString(testVerticalSeam));
+        SCUtility.showEnergy(sc);
 
     }
 

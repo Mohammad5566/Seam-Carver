@@ -13,7 +13,6 @@ public class Energy {
     and returns the energy of that pixel.
      */
     public static double getEnergy(Picture p, int x, int y) {
-        checkIndex(p, x, y);
 
         Color x2 = getColor(p, x + 1, y);
         Color x1 = getColor(p, x - 1, y);
@@ -53,15 +52,6 @@ public class Energy {
         return new Color(p.getRGB(x, y));
     }
 
-    /*Throws error if indices are out of bounds */
-    private static void checkIndex(Picture p, int x, int y) {
-        if (x < 0 || x >= p.width()) {
-            throw new IndexOutOfBoundsException();
-        }
-        if (y < 0 || y >= p.height()) {
-            throw new IndexOutOfBoundsException();
-        }
-    }
 
     /*Returns absolute value of difference between x and y.*/
     private static double abs(double x, double y) {
