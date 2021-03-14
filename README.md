@@ -34,5 +34,5 @@ Output:
 <p align="middle">
   <img src="![output](https://user-images.githubusercontent.com/55007814/111056680-0d93b980-844f-11eb-867f-f36dbbeb7a7c.png)" width="550" />
 </p>
-![output](output.png)
+![output](hw5/output.png)
 
