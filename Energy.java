@@ -44,8 +44,7 @@ public class Energy {
         return square(RDiff) + square(GDiff) + square(BDiff);
     }
 
-    /*
-    Gets the Color object associated with a particular pixel.*/
+    /*Gets the Color object associated with a particular pixel.*/
     private static Color getColor(Picture p, int x, int y) {
         if (x >= p.width()) x = 0;
         if (y >= p.height()) y = 0;
@@ -73,9 +72,4 @@ public class Energy {
     private static double square(double x) {
         return x * x;
     }
-
-
-
-
-
 }

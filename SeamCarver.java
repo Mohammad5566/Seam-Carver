@@ -1,12 +1,11 @@
+
+import edu.princeton.cs.algs4.Picture;
+
 /**
  * @author Mohammad Mahmud
  * CS 61B SP18 HW5: Seam Carving
  */
-import edu.princeton.cs.algs4.Picture;
-import edu.princeton.cs.algs4.StdDraw;
 
-import java.awt.*;
-import java.util.Arrays;
 
 public class SeamCarver {
 
@@ -70,7 +69,7 @@ public class SeamCarver {
 
 
     public static void main(String[] args) {
-        Picture p = new Picture("images/3x4.png");
+        Picture p = new Picture("images/nyc.jpg");
         SeamCarver sc = new SeamCarver(p);
 
 
@@ -78,6 +77,9 @@ public class SeamCarver {
 
         Picture energyPicture = SCUtility.toEnergyPicture(sc);
         energyPicture.show();
+
+        energyPicture.save("nyc-energy");
+
     }
 
 }
