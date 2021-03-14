@@ -7,14 +7,10 @@
 **Energy calculation:** The first step is to calculate the energy of each pixel, which is a measure of the importance of each pixel—the higher the energy, the less likely that the pixel will be included as part of a seam. The energy of a pixel is compute using the dual gradient energy function. A high-energy pixel corresponds to a pixel where there is a sudden change in color. The seam-carving technique avoids removing such high-energy pixels to preserve as much of the orignal image's properties as it can. Pixels with higher energy values have whiter values.  
 The energy picture the image below is shown on the right.
 
-
-
-
 <p align="middle">
-  <img src="https://i.imgur.com/eIQVUYP.jpg" width="450" />
-  <img src="https://i.imgur.com/pIaHQVx.jpg" width="450" /> 
+  <img src="images/nyc.jpg" width="500" />
+  <img src="images/nyc-energy.jpg" width="500" /> 
 </p>
-
 
 **Seam Identification:** The next step is to find a vertical seam of minimum total energy. This is similar to the classic shortest path problem in an edge-weighted digraph except for the following:
  * The weights are on the vertices instead of the edges.
@@ -22,3 +18,20 @@ The energy picture the image below is shown on the right.
  * The digraph is acyclic, where there is a downward edge from pixel (x, y) to pixels (x − 1, y + 1), (x, y + 1), and (x + 1, y + 1), assuming that the coordinates are in the     prescribed range.
 
 **Seam Removal:** The final step is remove from the image all of the pixels along the seam. The logic for this method has been implemented for you in the supplementary SeamRemover class, provided in SeamRemover.java.
+
+### Usage:  
+
+To visualize the seam removal process, run ```SeamCarverVisualizer.java``` with the following command line arguements:   
+
+```java SeamCarverVisualizer [filename] [numPixels to remove] [y (if horizontal carving) | N (otherwise)]``` 
+
+Example: Remove 100 vertical seams from the image ```nyc.jpg```.
+
+```java SeamCarverVisualizer images/nyc.jpg 100 N```
+
+Output: 
+
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/55007814/111056818-1d5fcd80-8450-11eb-84dd-61e8d736b576.png" width="650" />
+</p>
+
