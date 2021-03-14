@@ -21,16 +21,16 @@ The energy picture the image below is shown on the right.
 
 ### Usage:  
 
-In order to visualize the seam removal process, run ```SeamCarverVisualizer.java``` with the following command line arguements:   
+To visualize the seam removal process, run ```SeamCarverVisualizer.java``` with the following command line arguements:   
 
 ```java SeamCarverVisualizer [filename] [numPixels to remove] [y (if horizontal carving) | N (otherwise)]``` 
 
-Example: Remove 100 horizontal seams from the image ```nyc.jpg```.
+Example: Remove 100 vertical seams from the image ```nyc.jpg```.
 
-```java SeamCarverVisualizer images/nyc.jpg 100 y```
+```java SeamCarverVisualizer images/nyc.jpg 100 N```
 
 Output:
-![output](https://user-images.githubusercontent.com/55007814/111056818-1d5fcd80-8450-11eb-84dd-61e8d736b576.png)
+![output](https://user-images.githubusercontent.com/55007814/111056818-1d5fcd80-8450-11eb-84dd-61e8d736b576.png) =550px
 
 
 
