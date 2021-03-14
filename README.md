@@ -37,12 +37,12 @@ Example: Remove 100 vertical seams from the image ```nyc.jpg```.
 ### Examples
 
 <figure>
-    <img src='images/nyc.jpg' alt='nycOriginal' />
+    <img src='images/nyc.jpg' alt='nycOriginal' width="500" />
     <figcaption>Original 1280x675</figcaption>
 </figure>
 
 <figure>
-    <img src='output-nyc.jpg' alt='nyc-output' />
+    <img src='output-nyc.jpg' alt='nyc-output' width="500"/>
     <figcaption>Resized to 768x405</figcaption>
 </figure>
 
