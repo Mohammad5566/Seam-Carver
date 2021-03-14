@@ -1,3 +1,4 @@
+
 # Seam Carver
 
 [Seam Carving](https://www.wikiwand.com/en/Seam_carving) is a content-aware image resizing technique where the image is reduced in size by one pixel of height or width at a time. A vertical seam in an image is a path of pixels connected from the top to the bottom with one pixel in each row. A horizontal seam is a path of pixels connected from the left to the right with one pixel in each column.  
@@ -32,6 +33,6 @@ Example: Remove 100 vertical seams from the image ```nyc.jpg```.
 Output: 
 
 <p align="middle">
-  <img src="https://user-images.githubusercontent.com/55007814/111056818-1d5fcd80-8450-11eb-84dd-61e8d736b576.png" width="650" />
+  <img src="images/seamcarver.gif" width="650" />
 </p>
 
