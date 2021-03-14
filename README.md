@@ -7,19 +7,10 @@
 **Energy calculation:** The first step is to calculate the energy of each pixel, which is a measure of the importance of each pixel—the higher the energy, the less likely that the pixel will be included as part of a seam. The energy of a pixel is compute using the dual gradient energy function. A high-energy pixel corresponds to a pixel where there is a sudden change in color. The seam-carving technique avoids removing such high-energy pixels to preserve as much of the orignal image's properties as it can. Pixels with higher energy values have whiter values.  
 The energy picture the image below is shown on the right.
 
-
-
-
-<p align="middle">
-  <img src="https://i.imgur.com/eIQVUYP.jpg" width="450" />
-  <img src="https://i.imgur.com/pIaHQVx.jpg" width="450" /> 
-</p>
-
 <p align="middle">
   <img src="images/nyc.jpg" width="450" />
-  <img src="images/joker.jpg" width="450" /> 
+  <img src="images/nyc-energy.jpg" width="450" /> 
 </p>
-
 
 **Seam Identification:** The next step is to find a vertical seam of minimum total energy. This is similar to the classic shortest path problem in an edge-weighted digraph except for the following:
  * The weights are on the vertices instead of the edges.
