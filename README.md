@@ -18,3 +18,10 @@ The energy picture the image below is shown on the right.
  * The digraph is acyclic, where there is a downward edge from pixel (x, y) to pixels (x − 1, y + 1), (x, y + 1), and (x + 1, y + 1), assuming that the coordinates are in the     prescribed range.
 
 **Seam Removal:** The final step is remove from the image all of the pixels along the seam. The logic for this method has been implemented for you in the supplementary SeamRemover class, provided in SeamRemover.java.
+
+### Usage
+
+Run ```SeamCarverVisualize.java``` with the following commands to see seam carving in: 
+-------------------------------------------------------
+java SeamCarverVisualizer [filename] [numPixels to remove] [y (if horizontal carving) | N (otherwise)]
+----------------------------------------------------------
