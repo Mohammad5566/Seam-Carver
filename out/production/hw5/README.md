@@ -1,3 +1,4 @@
+
 # Seam Carver
 
 [Seam Carving](https://www.wikiwand.com/en/Seam_carving) is a content-aware image resizing technique where the image is reduced in size by one pixel of height or width at a time. A vertical seam in an image is a path of pixels connected from the top to the bottom with one pixel in each row. A horizontal seam is a path of pixels connected from the left to the right with one pixel in each column.  
@@ -5,11 +6,11 @@
 ### Finding and Removing a Seam:
 
 **Energy calculation:** The first step is to calculate the energy of each pixel, which is a measure of the importance of each pixel—the higher the energy, the less likely that the pixel will be included as part of a seam. The energy of a pixel is compute using the dual gradient energy function. A high-energy pixel corresponds to a pixel where there is a sudden change in color. The seam-carving technique avoids removing such high-energy pixels to preserve as much of the orignal image's properties as it can. Pixels with higher energy values have whiter values.  
-The energy picture the image below is shown on the right.
+An image and its corresponding energy image is shown below.
 
 <p align="middle">
-  <img src="images/nyc.jpg" width="500" />
-  <img src="images/nyc-energy.jpg" width="500" /> 
+  <img src="images/nyc.jpg" width="450" />
+  <img src="images/nyc-energy.jpg" width="450" /> 
 </p>
 
 **Seam Identification:** The next step is to find a vertical seam of minimum total energy. This is similar to the classic shortest path problem in an edge-weighted digraph except for the following:
@@ -32,6 +33,6 @@ Example: Remove 100 vertical seams from the image ```nyc.jpg```.
 Output: 
 
 <p align="middle">
-  <img src="https://user-images.githubusercontent.com/55007814/111056818-1d5fcd80-8450-11eb-84dd-61e8d736b576.png" width="650" />
+  <img src="images/seamcarver.gif" width="650" />
 </p>
 

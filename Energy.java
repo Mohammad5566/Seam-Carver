@@ -3,7 +3,8 @@ import edu.princeton.cs.algs4.Picture;
 import java.awt.Color;
 
 /**
- * Calculates the energy of a pixel in a given picture
+ * Utility class that calculates the energy of a
+ * pixel on an picture.
  */
 
 public class Energy {
@@ -52,10 +53,9 @@ public class Energy {
         return new Color(p.getRGB(x, y));
     }
 
-
     /*Returns absolute value of difference between x and y.*/
     private static double abs(double x, double y) {
-        return (x - y) < 0 ? (x - y) * -1 : x - y;
+        return (x - y < 0) ? (x - y) * -1 : (x - y);
     }
 
     /*Returns square of x.*/
