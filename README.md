@@ -23,6 +23,16 @@ The energy picture the image below is shown on the right.
 
 In order to visualize the seam removal process, run ```SeamCarverVisualizer.java``` with the following command line arguements:   
 
-```java SeamCarverVisualizer [filename] [numPixels to remove] [y (if horizontal carving) | N (otherwise)]```  
+```java SeamCarverVisualizer [filename] [numPixels to remove] [y (if horizontal carving) | N (otherwise)]``` 
 
-This will overlay the horizontal or vertical seams onto the image you desire to resize. In 
+Example: Remove 100 horizontal seams from the image ```nyc.jpg```.
+
+```java SeamCarverVisualizer images/nyc.jpg 100 y```
+
+Output:
+
+<p align="middle">
+  <img src="output.jpg" width="550" />
+</p>
+
+
