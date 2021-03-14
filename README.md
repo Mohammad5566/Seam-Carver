@@ -8,8 +8,8 @@
 The energy picture the image below is shown on the right.
 
 <p align="middle">
-  <img src="images/nyc.jpg" width="450" />
-  <img src="images/nyc-energy.jpg" width="450" /> 
+  <img src="images/nyc.jpg" width="500" />
+  <img src="images/nyc-energy.jpg" width="500" /> 
 </p>
 
 **Seam Identification:** The next step is to find a vertical seam of minimum total energy. This is similar to the classic shortest path problem in an edge-weighted digraph except for the following:
