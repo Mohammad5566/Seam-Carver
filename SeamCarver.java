@@ -139,7 +139,7 @@ public class SeamCarver {
 
         /*Reduce nyc.jpg dimensions by 40% by removing 512 vertical seams
         and 270 horizontal seams. 1280x675 --> 768x405. */
-        for (int i = 0; i < 768; i += 1) {
+        for (int i = 0; i < 512; i += 1) {
             sc.removeVerticalSeam(sc.findVerticalSeam());
         }
 

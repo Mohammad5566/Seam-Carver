@@ -30,8 +30,6 @@ Example: Remove 100 vertical seams from the image ```nyc.jpg```.
 
 ```java SeamCarverVisualizer images/nyc.jpg 100 N```
 
-Output: 
-
 <p align="middle">
   <img src="images/seamcarver.gif" width="650" />
 </p>
