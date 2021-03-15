@@ -53,12 +53,11 @@ public class SeamCarver {
                                     topBest + 1, row);
             row += 1;
         }
-
         return seam;
     }
 
     /*Returns index of pixel with lowest energy in first row. */
-    private int topRowMinEnergyIndex() {
+    private int topRowMinEnergyIndex(boolean transposed) {
         int minIndex = 0;
         double minEnergy = energy(0, 0);
         for (int i = 1; i < picture.width(); i += 1) {
