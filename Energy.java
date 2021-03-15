@@ -14,7 +14,6 @@ public class Energy {
     and returns the energy of that pixel.
      */
     public static double getEnergy(Picture p, int x, int y) {
-
         Color x2 = getColor(p, x + 1, y);
         Color x1 = getColor(p, x - 1, y);
 

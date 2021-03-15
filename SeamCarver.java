@@ -39,8 +39,8 @@ public class SeamCarver {
     * First, find the minimum energy at the top row of the image.
     * Use the index of the minimum top row energy to find the remaining
     * indices of the path of lowest total energy in image.
-    * At each row, check the row above's left, center, and right column
-    * The minimum energy of the 3 pixels is added to the minimum energy path.
+    * At each row, check the row above's bottom left, center, and right pixels.
+    * Index of minimum energy of the 3 pixels is added to the minimum energy path.
     * */
     private int[] findSeam(int length) {
         int[] seam = new int[length];
